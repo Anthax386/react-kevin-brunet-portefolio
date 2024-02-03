@@ -1,0 +1,32 @@
+[
+    {
+      "name": "HTML",
+      "image": "https://i.ibb.co/NWsq66x/HTML5.png",
+      "display":false
+    },
+    {
+      "name": "CSS",
+      "image": "https://i.ibb.co/y5ZJwJQ/CSS3.png",
+      "display":false
+    },
+    {
+      "name": "JavaScript",
+      "image": "https://i.ibb.co/hYzCPvM/javascript.png",
+      "display":false
+    },
+    {
+      "name":"JSON",
+      "image":"https://i.ibb.co/2WMP1wg/json.png",
+      "display":true
+    },
+    { 
+      "name":"sass",
+      "image":"https://i.ibb.co/wJK9580/sass.png",
+      "display":true
+    },
+    {
+      "name":"React",
+      "image":"https://i.ibb.co/7GBd5rT/react.png",
+      "display":true
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "image": "https://i.ibb.co/XF2vMB2/VS-Code.png",
+        "name": "vs Code",
+        "display":true
+    },
+    {
+        "image": "https://i.ibb.co/pnCVtxW/GIT.png",
+        "name": "GIT",
+        "display":false
+    },
+    {
+        "image": "https://i.ibb.co/5nHyL11/github.png",
+        "name": "Github",
+        "display":true
+    },
+    {
+        "image":"https://i.ibb.co/vQjcrSf/figma.png",
+        "name":"figma",
+        "display":true
+    }
+]

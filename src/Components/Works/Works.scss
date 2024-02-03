@@ -1,0 +1,35 @@
+.works {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    margin: 90px 25%;
+    padding: 1em;
+    gap: 20px;
+    color: $text-color;
+    @include respond-to ('huge'){
+        margin: 90px 15%;
+    }
+    @include respond-to ('large') {
+        margin: 90px 5%;
+    }
+    @include respond-to ('small'){
+        margin: 40px 0;
+    }
+    h2 {
+        font-size: 35px;
+        margin: 0;
+        @include respond-to ('medium') {
+            font-size: 25px;
+        }
+    }
+    .projets {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}    

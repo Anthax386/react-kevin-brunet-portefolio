@@ -1,0 +1,26 @@
+header {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    .title {
+        margin: 0;
+        padding: 0;
+        color: $text-color;
+        @include respond-to ('medium') {
+            font-size: 30px;
+        }
+    }
+    .header_menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            font-family: 'Montserrat Alternates', sans-serif;
+            color: $text-color;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// Variables
+$background-light1:rgb(253, 253, 254);
+$background-light2: rgb(247, 249, 255);
+$background-dark1: rgb(17, 19, 31);
+$background-dark2: rgb(19, 22, 37);
+
+$component: rgb(225, 233, 255);
+$component-dark: rgb(29, 46, 98);
+$component-shadow: rgba(0, 0, 0, 0.2);
+$component-dark-shadow: rgba(255, 255, 255, 0.2);
+
+$border: rgb(193, 208, 255);
+$border-dark: rgb(58, 79, 151);
+
+$text-color: rgb(58, 91, 199);
+$text-color-dark: rgb(158, 177, 255);
+
+// Typography rules
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat+Alternates:wght@400;700&display=swap');
+
+main, header, footer, h1, h2, h3, h4, h5, h6, p, button, div, span, a, li, ul {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: $text-color;
+}
+
+.title {
+    font-family: 'Kalam', cursive;
+    font-size: 40px;
+    color: $text-color;
+}
+
+// Breakpoints
+$breakpoints: (
+  'small': (max-width: 375px),
+  'medium': (max-width: 768px),
+  'large': (max-width: 1024px),
+  'huge': (max-width: 1440px),
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+body {
+  background:linear-gradient($background-light1, $background-light2);
+}
+
+// --- Components ---
+@import '../Components/Header/Header.scss';
+@import '../Components/SwitchBtn/SwitchBtn.scss';
+@import '../Components/About/About.scss';
+@import '../Components/Works/Works.scss';
+@import '../Components/Work/Work.scss';
+@import '../Components/Technos/Technos.scss';
+@import '../Components/Footer/Footer.scss';
+
+@import './layout/button.scss';
+
+@import './layout/darkTheme.scss';

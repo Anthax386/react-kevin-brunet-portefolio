@@ -1,0 +1,59 @@
+.projet { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    
+    background-color: $component;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: 5px 5px 10px $component-shadow;
+
+    @include respond-to ('medium') {
+        justify-content: space-around;
+        gap: 0;
+    }
+    &_readme {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+        @include respond-to ('medium') {
+            width: 180px;
+            gap: 10px
+        }
+        h3 {
+            font-size: 30px;
+            @include respond-to ('medium') {
+                font-size: 20px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }  
+    &_preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        img {
+            width: 300px;
+            box-shadow: 5px 5px 10px $component-shadow;
+            border-radius: 25px;
+            transition: transform 400ms ease-in-out;
+            @include respond-to ('medium') {
+                display: none;
+                opacity: 0;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+       }
+       .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%; 
+       }
+    }
+}
