@@ -17,6 +17,7 @@ app.use(cors());
 app.use('/work', require('./routes/work.routes'));
 app.use('/lang', require('./routes/lang.routes'));
 app.use('/tool', require('./routes/tool.routes'));
+app.use('/user', require('./routes/user.routes'));
 
 // Lancer le serveur
 app.listen(port, () => console.log('Le serveur a démarre au port '+ port));
