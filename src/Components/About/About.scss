@@ -4,7 +4,7 @@
     gap: 50px;
     justify-content: center;
     align-items: flex-start;
-    height: 30em;
+    height: fit-content;
     padding: 1em;
     margin: 90px 25%;
     @include respond-to ('huge'){
@@ -25,6 +25,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 50px;
         flex-wrap: nowrap;
         justify-content: space-between;
         width: 100%;
@@ -50,6 +51,7 @@
     &_right {
         display: flex;
         flex-direction: column;
+        gap: 80px;
         align-items: center;
         justify-content: space-between;
         height: 100%;

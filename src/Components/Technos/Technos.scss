@@ -39,30 +39,32 @@
             width: 100%;
             flex-wrap: wrap;
             justify-content: center;
-            .btn {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 5px;
-                width: fit-content;
-                img {
-                    padding: 0;
-                    margin: 0;
-                    height: 40px;
-                    @include respond-to ('medium') {
-                        height: 30px;
+            div {
+                .btn {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 5px;
+                    img {
+                        padding: 0;
+                        margin: 0;
+                        height: 40px;
+                        @include respond-to ('medium') {
+                            height: 30px;
+                        }
                     }
-                }
-                p {
-                    padding: 0;
-                    margin: 0;
-                    font-size: 20px;
-                    @include respond-to ('medium') {
-                        display: none;
-                        opacity: 0;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        font-size: 20px;
+                        @include respond-to ('medium') {
+                            display: none;
+                            opacity: 0;
+                        }
                     }
                 }
             }
+
         }
     }
 }

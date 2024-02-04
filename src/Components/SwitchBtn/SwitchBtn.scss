@@ -57,8 +57,22 @@
 }
 
 @keyframes check {
-    0% {left: 6%;} 100%{left: 50%;}
+    0% {
+        left: 6%; 
+        opacity: 0;
+    } 
+    100%{
+        left: 50%;
+        opacity: 1;
+    }
 }
 @keyframes uncheck {
-    0% {left: 50%;} 100%{left: 6%;}
+    0% {
+        left: 50%;
+        opacity: 0;
+    } 
+    100% {
+        left: 6%;
+        opacity: 1;
+    }
 }

@@ -1,18 +1,31 @@
-// import works from '../../data/works.json'
 import Work from "../Work"
-import { getWorks } from "../../data/Datas";
+import { useState, useEffect } from "react";
+import { switchState } from "../../scripts/switchState";
+import { getWorks } from "../../data/getWorks";
 
-export default async function Works(){
+export default function Works(){
 
-    const works = await getWorks();
-    console.log(works)
-    
+    const [works, setWorks] = useState([]);
+    const [showMore, setShowMore] = useState(false)
+
+    useEffect(() => {
+        getWorks()
+        .then((data) => {
+            setWorks(data)
+        })
+    }, []);
+
     return (
         <section className="works" id="works">
             <h2 className="title">Mes projets</h2>
             <div className='projets'>
-                {works.map((work, index) => ((work.display===true) && <div key={index}><Work work={work}/></div> ))}
+                {
+                    showMore 
+                    ? works.map((work, index) => <div key={index}><Work work={work}/></div>)
+                    : works.map((work, index) => work.display && <div key={index}><Work work={work}/></div>)
+                }
             </div>
+            <button className="btn" onClick={() => switchState(showMore, setShowMore)}>{showMore ? 'Afficher moins...' : 'Afficher plus...'}</button>
         </section>
     )
 }

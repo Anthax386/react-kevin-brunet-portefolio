@@ -26,10 +26,13 @@
     }
     .projets {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         gap: 50px;
         justify-content: center;
         width: 100%;
         flex-wrap: wrap;
+    }
+    button{
+        cursor: pointer;
     }
 }    

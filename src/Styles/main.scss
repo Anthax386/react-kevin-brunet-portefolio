@@ -19,8 +19,10 @@ $text-color-dark: rgb(158, 177, 255);
 @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat+Alternates:wght@400;700&display=swap');
 
 main, header, footer, h1, h2, h3, h4, h5, h6, p, button, div, span, a, li, ul {
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: $text-color;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: $text-color;
 }
 
 .title {
